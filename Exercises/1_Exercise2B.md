@@ -2,7 +2,7 @@
 
 Some notes below ...
 
-![This is a map.](Exercises/1_Exercise2B.png)
+![This is a map.](1_Exercise2B.png)
 
 # This is Iowa's seal
 
