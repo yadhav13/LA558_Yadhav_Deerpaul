@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Map of Mauritius with marker on Fond du Sac and circle on Port Louis</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="LA 558 Leaflet trial 2023">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .leaflet-container {
+        height: 500px;
+        width: 600px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  </head>
+
+
+  <body>
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([-20.3484, 57.5522], 9);
+
+      var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+
+      var marker = L.marker([-20.0495, 57.5844]).addTo(map);
+
+      var circle = L.circle([-20.1609, 57.5012], {
+        color: 'green',
+        fillColor: 'yellow',
+        fillOpacity: 0.75,
+        radius: 1500
+      }).addTo(map);
+
+    </script>
+
+  </body>
+
+</html>
