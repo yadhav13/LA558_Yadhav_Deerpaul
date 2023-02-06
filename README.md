@@ -2,7 +2,7 @@
 
 Repository for LA 558 (Spring 2023).
 
-##Assignments
+## Assignments
 
 ### Pre course lecture practice problems
 
@@ -10,9 +10,9 @@ A link to [my first assignment](Exercises/2_candyObservation1.jpg).
 
 ### Assignment 1
 
-A link to the [description of Assignment 1](Assignments/2. Assignment 1/description.html).
+A link to the [description of Assignment 1]([Assignments/2. Assignment 1/description.html](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/2.%20Assignment%201/description.html).
 
-#Exercises
+## Exercises
 
 ### Lecture 2B (26.01.23)
 
