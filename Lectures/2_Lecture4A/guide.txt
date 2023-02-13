@@ -1,0 +1,37 @@
+#12.02.23
+
+# Set working directory
+## I have my own workflow for R and I prefer moving the files to my GitHub repository manually. I start by setting up my working directory.
+
+setwd("/Users/yadhav/Downloads/2_Lecture4A")
+
+# Load packages
+## I use pacman to load packages, the here package to import the files and tidyverse for plotting. Guide: https://epirhandbook.com/en/r-basics.html#how-to-install-and-load.
+
+pacman::p_load(
+  here,
+  tidyverse
+)
+
+# Import data
+## I use here package to import data: https://epirhandbook.com/en/import-and-export.html#here.
+
+fever_districts <- rio::import(here("datasets/1_fever_districts_1879.csv"))
+
+# Make basic bar chart
+## I use ggplot to make a basic bar chart. Guide: https://epirhandbook.com/en/ggplot-basics.html.
+
+ggplot(fever_districts, aes(x = Districts, y = Value))+ # data and axes
+geom_col( # display chart
+color = "red", # border color
+fill = "blue", # inside color
+alpha = 0.1) # transparency effect
+
+# Make second chart
+## For the second chart, I will use the file on mortality to create a scatterplot with groupings based on districts. I am employing only the 1879 figures for now but I will integrate other years in future renditions of the project. I will also sort out the binning for the values to be more meaningful. Guide: https://epirhandbook.com/en/ggplot-basics.html#ggplotgroups.
+
+mortality_districts <- rio::import(here("datasets/2_mortality_districts_1879.csv"))
+
+ggplot(data = mortality_districts,
+mapping = aes(x = Districts, y = Value, color = Districts))+
+geom_point(alpha = 0.5)
