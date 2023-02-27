@@ -1,0 +1,76 @@
+#26.02.23/#27.02.23
+
+# Set working directory
+
+setwd("/Users/yadhav/Downloads/Assignment 2")
+
+# Load packages
+
+pacman::p_load(
+  here,
+  tidyverse
+)
+
+# Import data
+
+fever_mortality_districts <- rio::import(here("datasets/1_fever-mortality_districts_1879.csv"))
+
+# Calculate percentage of fever over mortality
+
+fever_mortality_districts <- fever_mortality_districts %>%
+mutate(percentage = fever / mortality * 100)
+
+# Make basic bar chart
+
+ggplot(fever_mortality_districts, aes(x = districts, y = percentage))+ # Data and axes
+geom_col( # Display chart
+color = "red", # Border color
+fill = "blue", # Inside color
+alpha = 0.1)+ # Transparency effect
+labs(x = "Districts", y = "Percentage", title = "Percentage of Fever Deaths over Mortality Rate in Districts of Mauritius during 1879") # Formatting title and axes
+
+***
+
+# Set working directory
+
+setwd("/Users/yadhav/Downloads/Assignment 2")
+
+# Load packages
+
+pacman::p_load(
+  here,
+  tidyverse,
+  sf,
+  ggsn
+)
+
+# Import csv
+
+fever_mortality_districts <- rio::import(here("datasets/1_fever-mortality_districts_1879.csv"))
+
+# Calculate percentage of fever over mortality
+
+fever_mortality_districts <- fever_mortality_districts %>%
+mutate(percentage = fever / mortality * 100)
+
+# Import shp
+
+districts_shp <- read_sf('datasets/shapefile/districts.shp')
+
+# Merge csv and shp
+
+csv_shp <- merge(districts_shp, fever_mortality_districts, by.x = "districts", by.y = "districts")
+
+# Plot map for percentage
+
+map <- ggplot(csv_shp) + geom_sf(aes(fill = percentage))+
+geom_sf_label(aes(label = districts), label.padding = unit(1, "mm"))+
+labs(x = "Longitude", y = "Latitude", fill="Percentage", title = "Percentage of Fever Deaths over Mortality Rate in Districts of Mauritius during 1879")
+
+# Add north symbol and scale bar
+
+map +
+    blank() +
+    north(csv_shp) +
+    scalebar(csv_shp, dist = 5, dist_unit = "km",
+             transform = TRUE, model = "WGS84")
