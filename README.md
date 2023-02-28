@@ -12,6 +12,10 @@ A link to [my first assignment](Exercises/2_candyObservation1.jpg).
 
 A link to [Assignment 1](Assignments/2.%20Assignment%201/description.html).
 
+### 3. Assignment 2
+
+A link to [Assignment 2](Assignments/3.%20Assignment%202/assign2.md).
+
 ## B. Exercises
 
 ### 1. Lecture 2B (26.01.23)
