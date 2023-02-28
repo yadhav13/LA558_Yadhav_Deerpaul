@@ -25,3 +25,7 @@ A link to [Exercise 2B](Exercises/1_Exercise2B.md).
 ### 2. Lecture 3B (02.02.23)
 
 A link to [Exercise 3B](Exercises/3_Exercise3B.html).
+
+### 3. Lecture 4A (28.02.23)
+
+A link to [Exercise 4A](Lectures/2_Lecture4A/ex4a.md).
