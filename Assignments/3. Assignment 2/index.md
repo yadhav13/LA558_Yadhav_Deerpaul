@@ -15,8 +15,8 @@ The following page includes information on Assignment 2. It is a modification of
 
 ### Figure 1: Chart
 
-![Chart](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/3.%20Assignment%202/figures/1_chart.png)
+![Chart](https://raw.githubusercontent.com/yadhav13/LA558_Yadhav_Deerpaul/main/Assignments/3.%20Assignment%202/figures/1_chart.png)
 
 ### Figure 2: Map
 
-![Map](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/3.%20Assignment%202/figures/2_map.png)
+![Map](https://raw.githubusercontent.com/yadhav13/LA558_Yadhav_Deerpaul/main/Assignments/3.%20Assignment%202/figures/2_map.png)
