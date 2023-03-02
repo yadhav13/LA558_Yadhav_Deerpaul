@@ -14,7 +14,7 @@ A link to [Assignment 1](Assignments/2.%20Assignment%201/description.html).
 
 ### 3. Assignment 2
 
-A link to [Assignment 2](Assignments/3.%20Assignment%202/index.md).
+A link to [Assignment 2](Assignments/3.%20Assignment%202/index.html).
 
 ## B. Exercises
 
