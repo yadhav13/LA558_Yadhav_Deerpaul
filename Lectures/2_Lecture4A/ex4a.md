@@ -14,8 +14,8 @@ The page contains the details for the exercise for Lecture 4A. It is a modificat
 
 ### Figure 1: Bar chart
 
-![Chart](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Lectures/2_Lecture4A/figures/1_fever_districts_1879_barchart.png)
+![Chart](https://raw.githubusercontent.com/yadhav13/LA558_Yadhav_Deerpaul/main/Lectures/2_Lecture4A/figures/1_fever_districts_1879_barchart.png)
 
 ### Figure 2: Scatter plot
 
-![Plot](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Lectures/2_Lecture4A/figures/2_mortality_districts_1879_scatterplot.png)
+![Plot](https://raw.githubusercontent.com/yadhav13/LA558_Yadhav_Deerpaul/main/Lectures/2_Lecture4A/figures/2_mortality_districts_1879_scatterplot.png)
