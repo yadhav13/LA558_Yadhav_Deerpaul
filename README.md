@@ -18,7 +18,7 @@ A link to [Assignment 2](Assignments/3.%20Assignment%202/index.md).
 
 ### 4. Assignment 3
 
-A link to [Assignment 3](Assignments/4.%20Assignment%204/description.md).
+A link to [Assignment 3](Assignments/4.%20Assignment%203/description.md).
 
 ## B. Exercises
 
