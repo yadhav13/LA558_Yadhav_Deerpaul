@@ -16,6 +16,10 @@ A link to [Assignment 1](Assignments/2.%20Assignment%201/description.html).
 
 A link to [Assignment 2](Assignments/3.%20Assignment%202/index.md).
 
+### 4. Assignment 3
+
+A link to [Assignment 3](4. Assignment 3/description.md).
+
 ## B. Exercises
 
 ### 1. Lecture 2B (26.01.23)
