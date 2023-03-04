@@ -18,7 +18,7 @@ A link to [Assignment 2](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/
 
 ### 4. Assignment 3
 
-A link to [Assignment 3](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4.%20Assignment%203).
+A link to [Assignment 3](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4.%20Assignment%203/description.md).
 
 ## B. Exercises
 
