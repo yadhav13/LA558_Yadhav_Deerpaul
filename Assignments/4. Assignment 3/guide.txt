@@ -1,0 +1,88 @@
+#03.03.23
+
+# General
+
+## Set working directory
+
+setwd("/Users/yadhav/Downloads/4. Assignment 3")
+
+## Load packages
+
+pacman::p_load(
+  here,
+  tidyverse,
+  tidycensus,
+  ggsn
+)
+
+## Load API key
+
+readRenviron("~/Documents/R/.Renviron")
+
+# Plot 1
+
+## Get data
+
+household_size <- get_decennial(geography = "state", 
+                       variables = "H013001", 
+                       year = 2010)
+
+## Check headers
+
+head(household_size)
+
+## Visualize table
+
+household_size %>%
+  ggplot(aes(x = value, y = reorder(NAME, value))) + 
+  geom_point()+
+labs(x = "Value", y = "State", title = "USCB Household Size in US States in 2010")
+
+# Plot 2
+
+## Get data
+
+options(tigris_use_cache = TRUE)
+
+story <- get_decennial(
+  state = "IA",
+  county = "Story",
+  geography = "tract",
+  variables = "H001001",
+  geometry = TRUE,
+  year = 2010
+)
+
+## Check headers
+
+head(story)
+
+## Visualize map
+
+map <- story %>%
+  ggplot(aes(fill = value)) +
+  geom_sf(color = NA) +
+  scale_fill_viridis_c(option = "magma")+
+labs(x = "Longitude", y = "Latitude", fill="Value", title = "Total Housing Units in Story County, Iowa (2010) - USCB")
+
+## Add north symbol and scale bar
+
+map +
+    north(story, symbol = 4, location = "topright") +
+    scalebar(story, location = "bottomright", st.size = 2, dist = 5, dist_unit = "km",
+             transform = TRUE, model = "WGS84")
+
+# Plot 3
+
+## Import csv
+
+rainfall <- rio::import(here("/Users/yadhav/Downloads/4. Assignment 3/datasets/1_rainfall_pamplemousses_january.csv"))
+
+## Make basic bar chart
+
+ggplot(rainfall, aes(x = january, y = inches))+scale_x_continuous(breaks = seq(from = 1871, to = 1879, by = 1))+ # Data and axes
+geom_col( # Display chart
+color = "red", # Border color
+fill = "blue", # Inside color
+alpha = 0.1)+ # Transparency effect
+labs(x = "Year", y = "Rainfall in Inches", title = "Rainfall (Inches) in January during 1871-1879 at Observatory, Pamlemousses in Mauritius") # Formatting title and axes
