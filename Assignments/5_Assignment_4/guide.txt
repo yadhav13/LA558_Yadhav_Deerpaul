@@ -1,0 +1,99 @@
+#20.03.23
+
+# Set working directory
+
+setwd("/Users/yadhav/Downloads/5_Assignment_4")
+
+# Load packages
+
+pacman::p_load(
+  here,
+  leaflet,
+  magrittr
+)
+
+# Import data
+
+data <- rio::import(here("datasets/jan65_may66_sc_82.csv"))
+
+# Make map
+
+map <- leaflet(data) %>%
+addTiles() %>%
+setView(lat = -20.16103348435079, lng = 57.50261025447053 , zoom = 9) %>%
+addMarkers(lat = ~latitude, lng = ~longitude, label = ~location, popup = ~details, clusterOptions = markerClusterOptions())
+map
+
+***
+
+#21.03.23
+
+# Set working directory
+
+setwd("/Users/yadhav/Downloads/5_Assignment_4")
+
+# Load packages
+
+pacman::p_load(
+  here,
+  tidyverse,
+  sf,
+  leaflet,
+  magrittr,
+  RColorBrewer
+)
+
+# Import csv
+
+fever_mortality_districts <- rio::import(here("datasets/1_fever-mortality_districts_1879.csv"))
+
+# Calculate percentage of fever over mortality
+
+fever_mortality_districts <- fever_mortality_districts %>%
+mutate(percentage = fever / mortality * 100)
+
+# Import shp
+
+districts_shp <- read_sf('datasets/shapefile/districts.shp')
+
+# Merge csv and shp
+
+csv_shp <- merge(districts_shp, fever_mortality_districts, by.x = "districts", by.y = "districts")
+
+# Make labels
+
+labels <- sprintf(
+  csv_shp$districts
+) %>% lapply(htmltools::HTML)
+
+# Make colors
+
+display.brewer.all()
+pal <- colorBin("OrRd", domain = csv_shp$percentage, bins = 8)
+
+# Make map
+
+map <- leaflet(data) %>%
+addTiles() %>%
+setView(lat = -20.16103348435079, lng = 57.50261025447053 , zoom = 9) %>%
+addPolygons(data = csv_shp,
+    fillColor = ~pal(csv_shp$percentage),
+    weight = 0.5,
+    opacity = 1,
+    color = "grey",
+    dashArray = "1",
+    fillOpacity = 0.8,
+highlightOptions = highlightOptions(
+      weight = 2,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE),
+label = labels,
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "10px",
+      direction = "auto")) %>% 
+addLegend(pal = pal, values = csv_shp$percentage, opacity = 0.7, title = "Percentage of Fever Deaths",
+    position = "bottomright")
+map
