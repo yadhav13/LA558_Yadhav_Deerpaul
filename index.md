@@ -15,12 +15,10 @@ A link to [Assignment 1](Assignments/2.%20Assignment%201/description.html).
 ### 3. Assignment 2
 
 A link to [Assignment 2](Assignments/3_Assignment_2/index.md).
-*Secondary link to [Assignment 2](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/3.%20Assignment%202/index.md).*
 
 ### 4. Assignment 3
 
 A link to [Assignment 3](Assignments/4_Assignment_3/description.md).
-*Secondary link to [Assignment 3](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4.%20Assignment%203/description.md).*
 
 ## B. Exercises
 
