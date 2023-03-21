@@ -6,21 +6,21 @@ The following page includes information on Assignment 3. The first two figures h
 
 ## Links
 
-* [RData](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4.%20Assignment%203/r)
-* [Datasets](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4.%20Assignment%203/datasets)
-* [Figures](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4.%20Assignment%203/figures)
-* [Guide](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4.%20Assignment%203/guide.txt)
+* [RData](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4_Assignment_3/r)
+* [Datasets](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4_Assignment_3/datasets)
+* [Figures](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/tree/main/Assignments/4_Assignment_3/figures)
+* [Guide](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4_Assignment_3/guide.txt)
 
 ## Images
 
 ### Figure 1: Chart (TidyCensus)
 
-![Chart](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4.%20Assignment%203/figures/1_householdsize-tc_chart.png?raw=true)
+![Chart](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4_Assignment_3/figures/1_householdsize-tc_chart.png?raw=true)
 
 ### Figure 2: Map (TidyCensus)
 
-![Map](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4.%20Assignment%203/figures/2_housingunits-tc_map.png?raw=true)
+![Map](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4_Assignment_3/figures/2_housingunits-tc_map.png?raw=true)
 
 ### Figure 3: Chart (Sanitary Commission - 1882)
 
-![Chart](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4.%20Assignment%203/figures/3_rainfall-own_chart.png?raw=true)
+![Chart](https://github.com/yadhav13/LA558_Yadhav_Deerpaul/blob/main/Assignments/4_Assignment_3/figures/3_rainfall-own_chart.png?raw=true)
