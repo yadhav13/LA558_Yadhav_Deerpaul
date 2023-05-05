@@ -1,4 +1,4 @@
-# Assignment 3
+# Lecture 6A
 
 ## Description
 
