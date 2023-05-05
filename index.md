@@ -28,7 +28,7 @@ A link to [Assignment 4](Assignments/5_Assignment_4/description.html).
 
 A link to [Assignment 6](Assignments/6_Assignment_6/tableau.html).
 
-### 5. Assignment 7
+### 6. Assignment 7
 
 A link to [Assignment 7](Assignments/7_Assignment_7/tableau.html).
 
