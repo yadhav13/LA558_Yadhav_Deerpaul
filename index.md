@@ -49,3 +49,7 @@ A link to [Exercise 4A](Lectures/2_Lecture4A/ex4a.md).
 ### 4. Lecture 6A
 
 A link to [Exercise 6A](Lectures/3_Lecture6A/Exercise6a.md).
+
+### 4. Lecture 7B
+
+A link to [Exercise 7B](Lectures/4_Lecture7B/description.html).
