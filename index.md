@@ -50,6 +50,10 @@ A link to [Exercise 4A](Lectures/2_Lecture4A/ex4a.md).
 
 A link to [Exercise 6A](Lectures/3_Lecture6A/Exercise6a.md).
 
-### 4. Lecture 7B
+### 5. Lecture 7B
 
 A link to [Exercise 7B](Lectures/4_Lecture_7B/description.html).
+
+### 6. Lecture 10B
+
+A link to [Exercise 10B](Lectures/5_Lecture_10B/tableau.html).
