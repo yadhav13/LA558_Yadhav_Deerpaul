@@ -20,7 +20,7 @@ A link to [Assignment 2](Assignments/3_Assignment_2/index.md).
 
 A link to [Assignment 3](Assignments/4_Assignment_3/description.md).
 
-### 5. Assignment 3
+### 5. Assignment 4
 
 A link to [Assignment 4](Assignments/5_Assignment_4/description.html).
 
