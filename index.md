@@ -24,6 +24,10 @@ A link to [Assignment 3](Assignments/4_Assignment_3/description.md).
 
 A link to [Assignment 4](Assignments/5_Assignment_4/description.html).
 
+### 5. Assignment 6
+
+A link to [Assignment 6](Assignments/6_Assignment_6/tableau.html).
+
 ## B. Exercises
 
 ### 1. Lecture 2B (26.01.23)
