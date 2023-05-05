@@ -20,15 +20,15 @@ A link to [Assignment 2](Assignments/3_Assignment_2/index.md).
 
 A link to [Assignment 3](Assignments/4_Assignment_3/description.md).
 
-### 4. Assignment 3
+### 5. Assignment 3
 
 A link to [Assignment 4](Assignments/5_Assignment_4/description.html).
 
-### 5. Assignment 6
+### 6. Assignment 6
 
 A link to [Assignment 6](Assignments/6_Assignment_6/tableau.html).
 
-### 6. Assignment 7
+### 7. Assignment 7
 
 A link to [Assignment 7](Assignments/7_Assignment_7/tableau.html).
 
