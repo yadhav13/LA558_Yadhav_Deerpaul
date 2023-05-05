@@ -1,0 +1,54 @@
+#05.03.23
+
+# General
+
+## Set working directory
+
+setwd("/Users/yadhav/Downloads/3_Lecture6A")
+
+## Load packages
+
+pacman::p_load(
+  here,
+  tidyverse,
+  tidycensus,
+  ggsn
+)
+
+## Load API key
+
+readRenviron("~/Documents/R/.Renviron")
+
+# Plot 1
+
+## Get data
+
+options(tigris_use_cache = TRUE)
+
+dane <- get_decennial(
+  state = "WI",
+  county = "Dane",
+  geography = "tract",
+  variables = "H001001",
+  geometry = TRUE,
+  year = 2010
+)
+
+## Check headers
+
+head(dane)
+
+## Visualize map
+
+map <- dane %>%
+  ggplot(aes(fill = value)) +
+  geom_sf(color = NA) +
+  scale_fill_viridis_c(option = "magma")+
+labs(x = "Longitude", y = "Latitude", fill="Value", title = "Total Housing Units in Dane County, Madison (2010) - USCB")
+
+## Add north symbol and scale bar
+
+map +
+    north(dane, symbol = 4, location = "topright") +
+    scalebar(dane, location = "bottomright", st.size = 2, dist = 5, dist_unit = "km",
+             transform = TRUE, model = "WGS84")
