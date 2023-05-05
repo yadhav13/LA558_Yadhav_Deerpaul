@@ -1,0 +1,20 @@
+#05.05.23
+
+# Set working directory
+
+setwd("/Users/yadhav/Downloads/4_Lecture_7B")
+
+# Load packages
+
+pacman::p_load(
+  leaflet,
+  magrittr
+)
+
+# Make map
+
+map <- leaflet(data) %>%
+addTiles() %>%
+setView(lat = -20.16103348435079, lng = 57.50261025447053 , zoom = 9) %>%
+addMarkers(lat = -19.99954357771832, lng = 57.55231212341452, label = "Mont Choisy", popup = "My favorite beach in Mauritius")
+map
