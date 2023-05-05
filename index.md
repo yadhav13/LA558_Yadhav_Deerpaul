@@ -34,15 +34,15 @@ A link to [Assignment 7](Assignments/7_Assignment_7/tableau.html).
 
 ## B. Exercises
 
-### 1. Lecture 2B (26.01.23)
+### 1. Lecture 2B
 
 A link to [Exercise 2B](Exercises/1_Exercise2B.md).
 
-### 2. Lecture 3B (02.02.23)
+### 2. Lecture 3B
 
 A link to [Exercise 3B](Exercises/3_Exercise3B.html).
 
-### 3. Lecture 4A (28.02.23)
+### 3. Lecture 4A
 
 A link to [Exercise 4A](Lectures/2_Lecture4A/ex4a.md).
 
