@@ -52,4 +52,4 @@ A link to [Exercise 6A](Lectures/3_Lecture6A/Exercise6a.md).
 
 ### 4. Lecture 7B
 
-A link to [Exercise 7B](Lectures/4_Lecture7B/description.html).
+A link to [Exercise 7B](Lectures/4_Lecture_7B/description.html).
