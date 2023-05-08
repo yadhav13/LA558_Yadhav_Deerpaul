@@ -1,0 +1,83 @@
+#07.05.23
+
+# Set working directory
+
+setwd("/Users/yadhav/Downloads/project")
+
+# Load packages
+
+pacman::p_load(
+  here,
+  leaflet,
+  magrittr,
+  leaftime,
+  htmltools,
+  leaflet.extras2
+)
+
+# Import data
+
+csv <- rio::import(here("datasets/meldrum/3_jan65_may66_sc_82.csv"))
+
+# Build data.frame
+
+df <- data.frame(
+  "Latitude" = c(
+    csv$latitude
+  ),
+  "Longitude" = c(
+    csv$longitude
+  ),
+  "start" = c(csv$start),
+  "end" = c(csv$end)
+)
+
+# Convert to GeoJSON
+
+geojson <- geojsonio::geojson_json(df,lat="Latitude",lon="Longitude")
+
+# Make map
+
+leaflet(geojson) %>%
+  addTiles(group = "base", layerId = "baseid") %>%
+  htmlwidgets::onRender("
+      function(el, x) {
+        console.log(this);
+        var myMap = this;
+        var imageUrl = 'LINK.PNG';
+        var imageBounds = [[-20.5255586609999, 57.3084949120001], [-19.981650718, 57.8083459640001]];
+
+        L.imageOverlay(imageUrl, imageBounds).addTo(myMap);
+      }
+      ") %>%
+  setView(lat = -20.16103348435079, lng = 57.50261025447053 , zoom = 12) %>%
+addMapPane("left", zIndex = 0) %>%
+addMapPane("right", zIndex = 0) %>%
+addCircleMarkers(radius = 1, lat = csv$latitude, lng = csv$longitude, label = csv$ocation, popup = csv$details, options = pathOptions(pane = "left")) %>%
+  addTimeline(
+    sliderOpts = sliderOptions(
+      formatOutput = htmlwidgets::JS(
+        "function(date) {return new Date(date).toDateString()}
+      "),
+      position = "bottomright",
+      step = 16,
+      duration = 5000,
+      showTicks = TRUE,
+    ),
+    timelineOpts = timelineOptions(
+      pointToLayer = htmlwidgets::JS(
+"
+function(data, latlng) {
+  return L.circleMarker(latlng, {
+    interactive: false,
+    radius: 10,
+    color: 'black',
+    fillColor: 'red',
+    fillOpacity: 1
+  })
+}
+"
+      ),
+      styleOptions = NULL
+    )
+  )
