@@ -2,7 +2,11 @@
 
 Repository for LA 558 (Spring 2023).
 
-## A. Assignments
+## A. Final Project
+
+A link to the [Final Project](Project/homepage.html).
+
+## B. Assignments
 
 ### 1. Pre course lecture practice problems
 
@@ -32,7 +36,7 @@ A link to [Assignment 6](Assignments/6_Assignment_6/tableau.html).
 
 A link to [Assignment 7](Assignments/7_Assignment_7/tableau.html).
 
-## B. Exercises
+## C. Exercises
 
 ### 1. Lecture 2B
 
